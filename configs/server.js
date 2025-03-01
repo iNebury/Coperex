@@ -7,6 +7,9 @@ import morgan from "morgan";
 import { dbConnection } from "./mongo.js";
 import authRoutes from "../src/auth/aut.routes.js";
 import userRoutes from "../src/usuario/usuario.routes.js"
+import compañiaRoutes from "../src/compañia/compañia.routes.js"
+import createAdmin from "../src/usuario/crearAdmin.js";
+import { swaggerDocs, swaggerUi } from "./swagger.js";
 
 const middlewares = (app) => {
     app.use(express.urlencoded({ extended: false }));
@@ -19,6 +22,8 @@ const middlewares = (app) => {
 const routes = (app) => {
     app.use("/coperex/v1/auth", authRoutes);
     app.use("/coperex/v1/user", userRoutes);
+    app.use("/coperex/v1/compania", compañiaRoutes);
+    app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs))
 };
 
 const conectarDB = async () => {
@@ -36,6 +41,7 @@ export const initServer = () => {
         middlewares(app);
         conectarDB();
         routes(app)
+        createAdmin()
         const port = process.env.PORT;
         app.listen(port, () => {
             console.log(`Server running on port ${port}`);

@@ -1,0 +1,120 @@
+[{
+  "_id": {
+    "$oid": "67c24cd614850708e9483e51"
+  },
+  "nombre": "Microsoft",
+  "añosDeTrayectoria": 25,
+  "impacto": "Innovación en software empresarial",
+  "email": "contacto@techsolutions.com",
+  "telefono": "12345678",
+  "direccion": "Avenida Principal #123, Ciudad",
+  "categoria": "Tecnología",
+  "fundacion": 2000,
+  "status": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67c2548659e31bf00e419461"
+  },
+  "nombre": "Moda Urbana",
+  "añosDeTrayectoria": 6,
+  "impacto": "Ropa de última moda",
+  "email": "ventas@modaurbana.com",
+  "telefono": "+50222334455",
+  "direccion": "Zona 14, Ciudad de Guatemala",
+  "categoria": "Ropa",
+  "fundacion": 2019,
+  "status": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67c2549059e31bf00e419464"
+  },
+  "nombre": "NutriVida",
+  "añosDeTrayectoria": 9,
+  "impacto": "Alimentos saludables y suplementos",
+  "email": "info@nutrivida.com",
+  "telefono": "+50222001122",
+  "direccion": "Zona 4, Ciudad de Guatemala",
+  "categoria": "Alimentos",
+  "fundacion": 2016,
+  "status": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67c2549959e31bf00e419467"
+  },
+  "nombre": "MediCare GT",
+  "añosDeTrayectoria": 13,
+  "impacto": "Servicios médicos y farmacia",
+  "email": "contacto@medicaregt.com",
+  "telefono": "+50221223344",
+  "direccion": "Zona 9, Ciudad de Guatemala",
+  "categoria": "Medicina",
+  "fundacion": 2012,
+  "status": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67c254a059e31bf00e41946a"
+  },
+  "nombre": "ByteCode",
+  "añosDeTrayectoria": 8,
+  "impacto": "Desarrollo de aplicaciones móviles",
+  "email": "info@bytecode.com",
+  "telefono": "+50222778899",
+  "direccion": "Antigua Guatemala",
+  "categoria": "Tecnología",
+  "fundacion": 2017,
+  "status": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67c254a959e31bf00e41946d"
+  },
+  "nombre": "FashionExpress",
+  "añosDeTrayectoria": 7,
+  "impacto": "Moda rápida y sostenible",
+  "email": "ventas@fashionexpress.com",
+  "telefono": "+50222667788",
+  "direccion": "Zona 15, Ciudad de Guatemala",
+  "categoria": "Ropa",
+  "fundacion": 2018,
+  "status": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67c254b359e31bf00e419470"
+  },
+  "nombre": "Super Alimentos",
+  "añosDeTrayectoria": 16,
+  "impacto": "Producción y distribución de alimentos",
+  "email": "info@superalimentos.com",
+  "telefono": "+50221003344",
+  "direccion": "Carretera a El Salvador",
+  "categoria": "Alimentos",
+  "fundacion": 2009,
+  "status": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67c254bd59e31bf00e419473"
+  },
+  "nombre": "Salud Integral",
+  "añosDeTrayectoria": 10,
+  "impacto": "Consultorios médicos accesibles",
+  "email": "consultas@saludintegral.com",
+  "telefono": "+50222990011",
+  "direccion": "Zona 16, Ciudad de Guatemala",
+  "categoria": "Medicina",
+  "fundacion": 2015,
+  "status": true,
+  "__v": 0
+}]

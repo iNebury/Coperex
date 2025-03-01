@@ -1,4 +1,5 @@
 import User from "../usuario/usuario.model.js"
+import Compañia from "../compañia/compañia.model.js"
 
 export const emailExists = async (email = "") => {
     const existe = await User.findOne({email})
@@ -20,3 +21,12 @@ export const userExists = async (uid = " ") => {
         throw new Error("No existe el usuario con el ID proporcionado")
     }
 }
+
+export const compañiaExist = async (uid = " ") => {
+    const existe = await Compañia.findById(uid)
+    if(!existe){
+        throw new Error("No existe el usuario con el ID proporcionado")
+    }
+}
+
+

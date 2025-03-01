@@ -1,0 +1,386 @@
+{
+	"info": {
+		"_postman_id": "9bc7003f-d496-4ee6-a145-665000dd7255",
+		"name": "Endpoints Coperex",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38544176"
+	},
+	"item": [
+		{
+			"name": "Usuario",
+			"item": [
+				{
+					"name": "Registrar usuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Diego\",\r\n    \"surname\": \"Urías\",\r\n    \"username\": \"diegourias\",\r\n    \"email\": \"diego.urias@gmail.com\",\r\n    \"password\": \"mypassword789\",\r\n    \"phone\": \"11223344\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/coperex/v1/auth/register",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"coperex",
+								"v1",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"diego.urias@gmail.com\",\r\n    \"password\": \"mypassword789\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/coperex/v1/auth/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"coperex",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar usuario",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2MyNDBlNDY1ZGM5N2FmYWUwZjVhZGUiLCJpYXQiOjE3NDA3ODM4OTUsImV4cCI6MTc0MDc4NzQ5NX0.4c5H_tMcTYH4mKZb9zxcZJaP15wt5H0d2pqyCDa41L4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"diego.urias@example.com\",\r\n    \"password\": \"mypassword789\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/coperex/v1/user/findUser/:uid",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"coperex",
+								"v1",
+								"user",
+								"findUser",
+								":uid"
+							],
+							"variable": [
+								{
+									"key": "uid",
+									"value": "67c240e465dc97afae0f5ade"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Usuarios",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"diego.urias@example.com\",\r\n    \"password\": \"mypassword789\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/coperex/v1/user/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"coperex",
+								"v1",
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Usuarios",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2MyNGU0ZTI3YzEzMDM0MzhhODY2YjkiLCJpYXQiOjE3NDA3ODczNTAsImV4cCI6MTc0MDc5MDk1MH0.VTm-iqa-_0uhZ8u-cqNoUBwOxDcSBlUBoToS2dqiZUo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Diego\",\r\n    \"surname\": \"Urías\",\r\n    \"username\": \"iNebury\",\r\n    \"email\": \"diego.urias@example.com\",\r\n    \"password\": \"mypassword789\",\r\n    \"phone\": \"11223344\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/coperex/v1/user/updateUser/:uid",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"coperex",
+								"v1",
+								"user",
+								"updateUser",
+								":uid"
+							],
+							"variable": [
+								{
+									"key": "uid",
+									"value": "67c24e4e27c1303438a866b9"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Compañias",
+			"item": [
+				{
+					"name": "Registrar Compañias",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2MyNGU0ZTI3YzEzMDM0MzhhODY2YjkiLCJpYXQiOjE3NDA3ODczNTAsImV4cCI6MTc0MDc5MDk1MH0.VTm-iqa-_0uhZ8u-cqNoUBwOxDcSBlUBoToS2dqiZUo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Salud Integral\",\r\n        \"impacto\": \"Consultorios médicos accesibles\",\r\n        \"email\": \"consultas@saludintegral.com\",\r\n        \"telefono\": \"+50222990011\",\r\n        \"direccion\": \"Zona 16, Ciudad de Guatemala\",\r\n        \"categoria\": \"Medicina\",\r\n        \"fundacion\": 2015,\r\n        \"status\": true\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/coperex/v1/compania/registrarCompania",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"coperex",
+								"v1",
+								"compania",
+								"registrarCompania"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Compañias",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2MyNGU0ZTI3YzEzMDM0MzhhODY2YjkiLCJpYXQiOjE3NDA3ODczNTAsImV4cCI6MTc0MDc5MDk1MH0.VTm-iqa-_0uhZ8u-cqNoUBwOxDcSBlUBoToS2dqiZUo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2MyNGU0ZTI3YzEzMDM0MzhhODY2YjkiLCJpYXQiOjE3NDA3ODczNTAsImV4cCI6MTc0MDc5MDk1MH0.VTm-iqa-_0uhZ8u-cqNoUBwOxDcSBlUBoToS2dqiZUo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Microsoft\",\r\n    \"impacto\": \"Innovación en software empresarial\",\r\n    \"email\": \"contacto@techsolutions.com\",\r\n    \"telefono\": \"12345678\",\r\n    \"direccion\": \"Avenida Principal #123, Ciudad\",\r\n    \"categoria\": \"Tecnología\"\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/coperex/v1/compania/actualizarCompania/:uid",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"coperex",
+								"v1",
+								"compania",
+								"actualizarCompania",
+								":uid"
+							],
+							"variable": [
+								{
+									"key": "uid",
+									"value": "67c24cd614850708e9483e51"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Compañias",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2MyNTIxMDc2ZGU0Y2QzYmU0YTVkNWYiLCJpYXQiOjE3NDA3ODgyNjgsImV4cCI6MTc0MDc5MTg2OH0.U3KrKs5WYS1qtStCSZpaYH19XncWLGkTyFsDghZnoYg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2MyNGU0ZTI3YzEzMDM0MzhhODY2YjkiLCJpYXQiOjE3NDA3ODczNTAsImV4cCI6MTc0MDc5MDk1MH0.VTm-iqa-_0uhZ8u-cqNoUBwOxDcSBlUBoToS2dqiZUo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"filtro\": 3\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/coperex/v1/compania/listarCompania",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"coperex",
+								"v1",
+								"compania",
+								"listarCompania"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
